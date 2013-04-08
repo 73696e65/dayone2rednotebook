@@ -31,7 +31,7 @@ Dir["#{dayone_dir}/*"].each do |f|
 	day = DateTime.parse(i_date).strftime("%-d")
 	timestamp = DateTime.parse(i_date).strftime("%A, %m/%d/%Y %r")
 
-	text				= xml.xpath("/plist/dict/string").first.text
+	text = xml.xpath("/plist/dict/string").first.text
 	
 	db[year_month] ||= Month.new
 	db[year_month].add(day, timestamp, text)
