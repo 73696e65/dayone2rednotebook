@@ -27,9 +27,9 @@ Dir["#{dayone_dir}/*"].each do |f|
 
 	i_date = xml.xpath("/plist/dict/date").text
 
-	year_month	= DateTime.parse(i_date).strftime("%Y-%m")
-	day					= DateTime.parse(i_date).strftime("%-d")
-	timestamp		= DateTime.parse(i_date).strftime("%A, %m/%d/%Y %r")
+	year_month = DateTime.parse(i_date).strftime("%Y-%m")
+	day = DateTime.parse(i_date).strftime("%-d")
+	timestamp = DateTime.parse(i_date).strftime("%A, %m/%d/%Y %r")
 
 	text				= xml.xpath("/plist/dict/string").first.text
 	
